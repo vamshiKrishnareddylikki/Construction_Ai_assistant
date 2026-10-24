@@ -6,14 +6,14 @@ import os
 import time
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
 from google.genai import errors
 
 load_dotenv()  # reads GEMINI_API_KEY and GEMINI_MODEL from the .env file
 
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
-client = genai.Client()  # picks up GEMINI_API_KEY automatically
-
-RETRY_CODES = {429, 500, 503}  # rate limit, server error, overloaded
+client = genai.Client(http_options=types.HttpOptions(timeout=120_000))  # give up after 2 minutes
+RETRY_CODES = {429, 500, 503, 504}  # rate limit, server error, overloaded, timeout
 
 
 def with_retry(call, attempts=5, wait=2):
