@@ -8,6 +8,7 @@ import json
 import glob
 from dotenv import load_dotenv
 from google import genai
+from llm_client import with_retry
 
 load_dotenv()
 EMBED_MODEL = os.getenv("GEMINI_EMBED_MODEL", "gemini-embedding-2")
@@ -36,7 +37,9 @@ def split_into_chunks(path):
 def embed(text, is_query=False):
     """Turn text into an embedding vector using Gemini."""
     prefix = "task: question answering | query: " if is_query else "title: none | text: "
-    result = client.models.embed_content(model=EMBED_MODEL, contents=prefix + text)
+    result = with_retry(
+        lambda: client.models.embed_content(model=EMBED_MODEL, contents=prefix + text)
+    )
     return result.embeddings[0].values
 
 
