@@ -1,18 +1,19 @@
 """
-Tool 3: Shared connection to the Gemini AI model.
-Every AI tool in this project will use ask_llm() to talk to the model.
+Shared connection to the Gemini AI model.
+Every AI tool in this project uses ask_llm() or ask_llm_json() to talk to the model.
 """
 import os
+import json
 import time
 from dotenv import load_dotenv
 from google import genai
-from google.genai import types
-from google.genai import errors
+from google.genai import types, errors
 
 load_dotenv()  # reads GEMINI_API_KEY and GEMINI_MODEL from the .env file
 
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 client = genai.Client(http_options=types.HttpOptions(timeout=120_000))  # give up after 2 minutes
+
 RETRY_CODES = {429, 500, 503, 504}  # rate limit, server error, overloaded, timeout
 
 
@@ -35,6 +36,15 @@ def ask_llm(prompt):
         lambda: client.models.generate_content(model=MODEL, contents=prompt)
     )
     return response.text
+
+
+def ask_llm_json(prompt):
+    """Send a prompt and get back structured data (a Python dict) instead of free text."""
+    config = types.GenerateContentConfig(response_mime_type="application/json")
+    response = with_retry(
+        lambda: client.models.generate_content(model=MODEL, contents=prompt, config=config)
+    )
+    return json.loads(response.text)
 
 
 if __name__ == "__main__":
