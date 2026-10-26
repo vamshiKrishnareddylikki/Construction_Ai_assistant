@@ -41,14 +41,8 @@ Marina projects have the highest average overrun (9.1%) and delay (66 days).
 
 The model cuts prediction error in half compared to the baseline.
 
-## How to run
-```bash
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python src/build_index.py         # build the document search index
-streamlit run src/app.py          # open the Q&A web app
-python src/daily_run.py           # run all daily automations
+
+
 
 ## Tool 3: Document Q&A Bot (RAG)
 Answers questions from company documents (contracts, safety manual, closeout, RFI process),
@@ -80,12 +74,7 @@ A daily pipeline that runs every morning on a schedule:
 - **Timeouts**, so requests never hang
 - **Secrets** stored in `.env`, never committed
 
-python src/generate_data.py      # create realistic sample data
-python src/clean_data.py         # clean it
-python src/migrate_to_db.py      # migrate into SQLite
-python src/make_charts.py        # charts + statistics
-python src/train_delay_model.py  # train the delay predictor
-```
+
 ## Tool 5: Post-Training Experiment (Fine-tuning vs. RAG)
 **Question:** for company policy knowledge, is it better to fine-tune a model or use RAG?
 
@@ -107,6 +96,22 @@ format, and behavior.
 
 **Debugging along the way:** removed an incompatible `torchao` version and switched from bfloat16
 to 32-bit precision because the T4 GPU doesn't support bfloat16.
+
+
+## How to run
+```bash
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python src/build_index.py         # build the document search index
+streamlit run src/app.py          # open the Q&A web app
+python src/daily_run.py           # run all daily automations
+python src/generate_data.py      # create realistic sample data
+python src/clean_data.py         # clean it
+python src/migrate_to_db.py      # migrate into SQLite
+python src/make_charts.py        # charts + statistics
+python src/train_delay_model.py  # train the delay predictor
+```
 
 ## Note on data
 Real company data is private, so this project uses a synthetic dataset of 500
