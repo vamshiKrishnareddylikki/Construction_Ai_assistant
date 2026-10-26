@@ -1,0 +1,9 @@
+project_id,project_name,project_type,county,project_manager,pm_email,planned_days,budget_usd,change_orders,hurricane_season_start,days_elapsed
+A2001,Harbor Point Marina Expansion,Marina,Miami-Dade,Jordan Lee,pm.jordan@example.com,330,7200000,14,1,150
+A2002,Ocean Club Clubhouse Renovation,Country Club,Palm Beach,Priya Shah,pm.priya@example.com,365,9500000,3,0,90
+A2003,Las Olas Residences,Multifamily,Broward,Jordan Lee,pm.jordan@example.com,540,19000000,11,1,300
+A2004,Jupiter Inlet Boutique Hotel,Hospitality,Palm Beach,Marcus Cole,pm.marcus@example.com,600,24000000,13,1,220
+A2005,Stuart Office Park Bldg C,Commercial,Martin,Priya Shah,pm.priya@example.com,420,11000000,4,0,120
+A2006,Sewall's Point Estate,Luxury Residential,Martin,Marcus Cole,pm.marcus@example.com,300,5200000,6,0,80
+A2007,Port St. Lucie Medical Fitout,Renovation,St. Lucie,Priya Shah,pm.priya@example.com,200,2800000,2,0,60
+A2008,Brickell Mixed-Use Tower,Multifamily,Miami-Dade,Marcus Cole,pm.marcus@example.com,560,21000000,16,1,260
