@@ -14,7 +14,7 @@ hospitality, marina, country club, commercial, and renovation projects.
 | 3 | Document Q&A bot (RAG) + web app | ✅ Done |
 | 4 | Workflow automations | ✅ Done |
 | 5 | Fine-tuned model (post-training) | ✅ Done |
-| 6 | AI agent | ⏳ Planned |
+| 6 | AI agent | ✅ Done |
 
 ## Tool 1: Data Migration Pipeline
 Takes a messy project export, cleans it, and migrates it into a SQL database.
@@ -98,6 +98,36 @@ format, and behavior.
 to 32-bit precision because the T4 GPU doesn't support bfloat16.
 
 
+## Tool 6: AI Agent (Project Operations Assistant)
+A tool-calling agent that decides on its own which tools to use, chains them, and answers
+in one response. Available as a chat in the web app, with a "Tools used" panel for transparency.
+
+**Tools the agent can call:**
+| Tool | Built on |
+|---|---|
+| `search_company_docs` | Tool 3 (RAG) |
+| `query_project_history` | Tool 1 (SQL database, read-only) |
+| `rank_active_projects_by_risk`, `predict_delay` | Tool 2 (delay model) |
+| `get_daily_digest` | Tool 4 (field report summarizer) |
+
+**Guardrails:** read-only SQL (keyword check + read-only database connection), max 8 steps per
+question, a system prompt that forbids invented numbers, names, and explanations, and strict
+safety-manual compliance. **Memory:** last 3 exchanges. **Tracing:** every question, tool call,
+and answer is logged to `logs/agent_trace.jsonl`.
+
+**Evaluation:** an automated suite of 10 tests checks tool choice, key facts, forbidden claims,
+the delete guardrail, out-of-scope questions, and safety pressure ("can we skip harnesses?").
+Score history is kept in `outputs/agent_eval_history.jsonl`.
+
+**What evaluation caught and fixed:**
+- Agent checked only 5 of 8 projects and got the right answer by luck → added a ranking tool (6 steps → 1)
+- Agent invented explanations ("due to permitting") → tightened the system prompt
+- First eval run scored 7/9, but both failures were false negatives (rounding and a non-breaking
+  space) → normalized formatting in the checker
+- Agent blended project names from two systems with different IDs → aligned IDs across
+  systems and added a regression test
+
+
 ## How to run
 ```bash
 python -m venv .venv
@@ -111,6 +141,8 @@ python src/clean_data.py         # clean it
 python src/migrate_to_db.py      # migrate into SQLite
 python src/make_charts.py        # charts + statistics
 python src/train_delay_model.py  # train the delay predictor
+python src/agent.py               # chat with the agent in the terminal
+python src/eval_agent.py          # run the agent evaluation suite
 ```
 
 ## Note on data
@@ -120,4 +152,4 @@ starts, project complexity, and county permit times.
 
 ## Tech
 Python · pandas · NumPy · SQL (SQLite) · Matplotlib · scikit-learn · Gemini & Groq LLM APIs ·
-Embeddings · RAG · Streamlit · JSON structured outputs · Task scheduling · Hugging Face · Transformers · PyTorch · PEFT/LoRA · TRL (SFT) · Google Colab · LLM-as-a-judge evals
+Embeddings · RAG · Streamlit · JSON structured outputs · Task scheduling · Hugging Face · Transformers · PyTorch · PEFT/LoRA · TRL (SFT) · Google Colab · LLM-as-a-judge evals · Tool calling · AI agents · Guardrails · Tracing · Agent evals
