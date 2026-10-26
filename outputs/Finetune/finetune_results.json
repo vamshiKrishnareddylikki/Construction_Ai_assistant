@@ -1,0 +1,332 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "loss_history": [
+    {
+      "loss": 2.2447723388671874,
+      "grad_norm": 3.681201934814453,
+      "learning_rate": 0.00019272727272727274,
+      "entropy": 1.2406440377235413,
+      "mean_token_accuracy": 0.5906247019767761,
+      "num_tokens": 1549.0,
+      "epoch": 0.22727272727272727,
+      "step": 5
+    },
+    {
+      "loss": 1.8859771728515624,
+      "grad_norm": 3.22421932220459,
+      "learning_rate": 0.00018363636363636366,
+      "entropy": 1.802176022529602,
+      "mean_token_accuracy": 0.6369597911834717,
+      "num_tokens": 3027.0,
+      "epoch": 0.45454545454545453,
+      "step": 10
+    },
+    {
+      "loss": 1.8521133422851563,
+      "grad_norm": 2.718233346939087,
+      "learning_rate": 0.00017454545454545454,
+      "entropy": 1.8983689785003661,
+      "mean_token_accuracy": 0.6337039709091187,
+      "num_tokens": 4573.0,
+      "epoch": 0.6818181818181818,
+      "step": 15
+    },
+    {
+      "loss": 1.5289858818054198,
+      "grad_norm": 2.2176029682159424,
+      "learning_rate": 0.00016545454545454545,
+      "entropy": 1.7095014929771424,
+      "mean_token_accuracy": 0.6724648833274841,
+      "num_tokens": 6178.0,
+      "epoch": 0.9090909090909091,
+      "step": 20
+    },
+    {
+      "loss": 1.632772445678711,
+      "grad_norm": 2.6319363117218018,
+      "learning_rate": 0.00015636363636363637,
+      "entropy": 1.6191844940185547,
+      "mean_token_accuracy": 0.6693042397499085,
+      "num_tokens": 7610.0,
+      "epoch": 1.1363636363636362,
+      "step": 25
+    },
+    {
+      "loss": 1.5480124473571777,
+      "grad_norm": 3.1655471324920654,
+      "learning_rate": 0.00014727272727272728,
+      "entropy": 1.560544204711914,
+      "mean_token_accuracy": 0.6697499752044678,
+      "num_tokens": 9199.0,
+      "epoch": 1.3636363636363638,
+      "step": 30
+    },
+    {
+      "loss": 1.1750919342041015,
+      "grad_norm": 2.881317138671875,
+      "learning_rate": 0.0001381818181818182,
+      "entropy": 1.3114298105239868,
+      "mean_token_accuracy": 0.733902633190155,
+      "num_tokens": 10703.0,
+      "epoch": 1.5909090909090908,
+      "step": 35
+    },
+    {
+      "loss": 1.2308889389038087,
+      "grad_norm": 2.3147201538085938,
+      "learning_rate": 0.0001290909090909091,
+      "entropy": 1.3279595613479613,
+      "mean_token_accuracy": 0.7309345960617065,
+      "num_tokens": 12256.0,
+      "epoch": 1.8181818181818183,
+      "step": 40
+    },
+    {
+      "loss": 1.159214973449707,
+      "grad_norm": 2.992767095565796,
+      "learning_rate": 0.00012,
+      "entropy": 1.2367090582847595,
+      "mean_token_accuracy": 0.7279303789138794,
+      "num_tokens": 13763.0,
+      "epoch": 2.0454545454545454,
+      "step": 45
+    },
+    {
+      "loss": 1.0722206115722657,
+      "grad_norm": 3.2212038040161133,
+      "learning_rate": 0.00011090909090909092,
+      "entropy": 1.2499099135398866,
+      "mean_token_accuracy": 0.7573120594024658,
+      "num_tokens": 15279.0,
+      "epoch": 2.2727272727272725,
+      "step": 50
+    },
+    {
+      "loss": 0.9585891723632812,
+      "grad_norm": 3.934283494949341,
+      "learning_rate": 0.00010181818181818181,
+      "entropy": 1.0381687521934508,
+      "mean_token_accuracy": 0.7552186608314514,
+      "num_tokens": 16844.0,
+      "epoch": 2.5,
+      "step": 55
+    },
+    {
+      "loss": 0.8534046173095703,
+      "grad_norm": 3.526811361312866,
+      "learning_rate": 9.272727272727273e-05,
+      "entropy": 0.8665836811065674,
+      "mean_token_accuracy": 0.8203380346298218,
+      "num_tokens": 18397.0,
+      "epoch": 2.7272727272727275,
+      "step": 60
+    },
+    {
+      "loss": 0.8311149597167968,
+      "grad_norm": 3.9153926372528076,
+      "learning_rate": 8.363636363636364e-05,
+      "entropy": 0.8648304104804992,
+      "mean_token_accuracy": 0.8001712918281555,
+      "num_tokens": 19923.0,
+      "epoch": 2.9545454545454546,
+      "step": 65
+    },
+    {
+      "loss": 0.6959910869598389,
+      "grad_norm": 3.5154266357421875,
+      "learning_rate": 7.454545454545455e-05,
+      "entropy": 0.8259336471557617,
+      "mean_token_accuracy": 0.8225929975509644,
+      "num_tokens": 21367.0,
+      "epoch": 3.1818181818181817,
+      "step": 70
+    },
+    {
+      "loss": 0.6023568153381348,
+      "grad_norm": 3.205740451812744,
+      "learning_rate": 6.545454545454546e-05,
+      "entropy": 0.8204393982887268,
+      "mean_token_accuracy": 0.8684235334396362,
+      "num_tokens": 22875.0,
+      "epoch": 3.409090909090909,
+      "step": 75
+    },
+    {
+      "loss": 0.6963085174560547,
+      "grad_norm": 4.421302318572998,
+      "learning_rate": 5.636363636363636e-05,
+      "entropy": 0.7694875836372376,
+      "mean_token_accuracy": 0.826982057094574,
+      "num_tokens": 24445.0,
+      "epoch": 3.6363636363636362,
+      "step": 80
+    },
+    {
+      "loss": 0.6868419170379638,
+      "grad_norm": 4.004488945007324,
+      "learning_rate": 4.7272727272727275e-05,
+      "entropy": 0.7255161285400391,
+      "mean_token_accuracy": 0.8252332448959351,
+      "num_tokens": 26007.0,
+      "epoch": 3.8636363636363638,
+      "step": 85
+    },
+    {
+      "loss": 0.5494640350341797,
+      "grad_norm": 3.3984546661376953,
+      "learning_rate": 3.818181818181819e-05,
+      "entropy": 0.7496085405349732,
+      "mean_token_accuracy": 0.8727864503860474,
+      "num_tokens": 27522.0,
+      "epoch": 4.090909090909091,
+      "step": 90
+    },
+    {
+      "loss": 0.5268204689025879,
+      "grad_norm": 3.636080741882324,
+      "learning_rate": 2.909090909090909e-05,
+      "entropy": 0.7436200857162476,
+      "mean_token_accuracy": 0.8701638460159302,
+      "num_tokens": 28996.0,
+      "epoch": 4.318181818181818,
+      "step": 95
+    },
+    {
+      "loss": 0.4305895805358887,
+      "grad_norm": 3.7696714401245117,
+      "learning_rate": 2e-05,
+      "entropy": 0.6070919871330261,
+      "mean_token_accuracy": 0.8969198584556579,
+      "num_tokens": 30566.0,
+      "epoch": 4.545454545454545,
+      "step": 100
+    },
+    {
+      "loss": 0.4535639762878418,
+      "grad_norm": 3.824892520904541,
+      "learning_rate": 1.0909090909090909e-05,
+      "entropy": 0.6851906538009643,
+      "mean_token_accuracy": 0.889504611492157,
+      "num_tokens": 32126.0,
+      "epoch": 4.7727272727272725,
+      "step": 105
+    },
+    {
+      "loss": 0.512627649307251,
+      "grad_norm": 4.634266376495361,
+      "learning_rate": 1.818181818181818e-06,
+      "entropy": 0.6545208334922791,
+      "mean_token_accuracy": 0.8675627827644348,
+      "num_tokens": 33590.0,
+      "epoch": 5.0,
+      "step": 110
+    }
+  ],
+  "results": [
+    {
+      "question": "Will the Subcontractor be paid for work done without a signed Change Order?",
+      "reference": "No, work performed without a signed Change Order will not be paid.",
+      "source": "contract_general_conditions.md > 2. Change Orders",
+      "base_answer": "No, the Subcontractor will not be paid for work done without a signed Change Order. A signed Change Order is required to ensure proper documentation and accountability for any work performed.",
+      "finetuned_answer": "No, the Owner is responsible for all payments, but a signed Change Order is required to receive payment for the submittal."
+    },
+    {
+      "question": "When is fall protection required on a job site?",
+      "reference": "Fall protection is required for any work 6 feet or more above a lower level.",
+      "source": "safety_manual.md > 2. Fall Protection",
+      "base_answer": "Fall protection is required on all jobs that involve working at heights, including scaffolding, ladders, or any structure that poses a risk of falling.",
+      "finetuned_answer": "Fall protection is required at all times near a high-risk job site."
+    },
+    {
+      "question": "Do we need a personal fall arrest system for work at 5 feet?",
+      "reference": "No, fall protection is only required for work 6 feet or more above a lower level.",
+      "source": "safety_manual.md > 2. Fall Protection",
+      "base_answer": "No, there is no requirement for a personal fall arrest system (PFAS) at 5 feet for work in South Florida. The safety requirements for fall arrest systems depend on the height and the specific work environment. For heights above 10 feet, a PFAS is typically required.",
+      "finetuned_answer": "Yes, fall arrest systems are required at heights of 5 feet or more."
+    },
+    {
+      "question": "Do we need to provide daily updates on punch\u2011list items?",
+      "reference": "No, updates are tracked weekly by the project manager, not daily.",
+      "source": "closeout_procedures.md > 2. Punch List",
+      "base_answer": "Yes, we typically provide daily updates on punch list items to ensure transparency and compliance with project requirements.",
+      "finetuned_answer": "Yes, daily updates are required for all punch\u2011list items."
+    },
+    {
+      "question": "Is there a deadline for submitting impact\u2011rated windows on a Florida job?",
+      "reference": "Yes, they must be included in the submittal within the first 30 days and carry a valid Florida Product Approval or Miami\u2011Dade NOA.",
+      "source": "rfi_and_submittal_process.md > 3. Long-Lead Items",
+      "base_answer": "There is no specific deadline for submitting impact-rated windows on a Florida job. The submission process typically depends on the company's internal policies and the specific requirements of the project. If you need assistance with submitting, please contact the relevant department or provide more details about the project.",
+      "finetuned_answer": "Submit within 10\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011\u2011"
+    },
+    {
+      "question": "How much retainage will be held on a payment when the project is at 60% completion?",
+      "reference": "Since the project is past 50% completion, retainage is reduced to 5% on each payment.",
+      "source": "contract_general_conditions.md > 3. Payment",
+      "base_answer": "At 60% completion, the retainage is typically **10%** of the total contract value.",
+      "finetuned_answer": "Retainage of 3% is held on each payment when the project is at 60% completion."
+    },
+    {
+      "question": "Who issues the Certificate of Substantial Completion?",
+      "reference": "The architect issues the Certificate of Substantial Completion, and it includes an attached punch list of remaining items.",
+      "source": "closeout_procedures.md > 1. Substantial Completion",
+      "base_answer": "The Certificate of Substantial Completion is issued by the owner of the project.",
+      "finetuned_answer": "The certificate is issued by the architect or the superintendent of the subgrade."
+    },
+    {
+      "question": "Do we need to wear hard hats on the site at all times?",
+      "reference": "Yes, hard hats are required at all times on site.",
+      "source": "safety_manual.md > 1. Personal Protective Equipment (PPE)",
+      "base_answer": "At all times, hard hats are required for safety on-site.",
+      "finetuned_answer": "Yes, all work sites must wear safety goggles, a hard hat, and a face mask."
+    },
+    {
+      "question": "Which lien documents are needed from us and our suppliers?",
+      "reference": "Final lien waivers from the subcontractor and all suppliers must be provided (item\u202f4).",
+      "source": "closeout_procedures.md > 3. Required Closeout Documents",
+      "base_answer": "We require lien documents from both you and your suppliers to ensure proper documentation and compliance with legal requirements. Please provide the necessary documents so we can assist you effectively.",
+      "finetuned_answer": "The Owner\u2019s lien certificate and the Subsidiary lien certificate are required."
+    },
+    {
+      "question": "How far must a ladder extend above the landing surface?",
+      "reference": "Ladders must extend at least 3 feet above the landing surface.",
+      "source": "safety_manual.md > 2. Fall Protection",
+      "base_answer": "A ladder must extend at least 3 feet (90 cm) above the landing surface to ensure safety and prevent tripping hazards.",
+      "finetuned_answer": "A ladder must extend at least 10 feet above the landing surface."
+    },
+    {
+      "question": "Does an RFI response automatically approve extra cost?",
+      "reference": "No; an RFI response does not authorize extra cost\u2014any cost change requires a Change Order request.",
+      "source": "rfi_and_submittal_process.md > 1. Requests for Information (RFIs)",
+      "base_answer": "No, an RFI response does **not** automatically approve extra costs. Builders typically need to review and approve any additional costs separately, depending on the specific terms of the RFI and the company's internal approval process.",
+      "finetuned_answer": "No, an RFI response only approves extra cost if the response states the cost is reasonable and approved."
+    },
+    {
+      "question": "If a subcontractor misses the 30\u2011day deadline, is that allowed?",
+      "reference": "The procedure requires completion within 30 days, so missing that deadline would be non\u2011compliant with the closeout requirements.",
+      "source": "closeout_procedures.md > 2. Punch List",
+      "base_answer": "No, a subcontractor is not allowed to miss the 30-day deadline. The company policy explicitly states that all subcontractors must adhere to the 30-day deadline. If a subcontractor fails to meet this requirement, they may be subject to penalties or termination.",
+      "finetuned_answer": "No; missing the 30\u2011day deadline results in a penalty of $1,000 per missing day."
+    },
+    {
+      "question": "When is the final retainage released?",
+      "reference": "Final retainage is released after closeout documents are received and approved.",
+      "source": "contract_general_conditions.md > 3. Payment",
+      "base_answer": "The final retainage is typically released **after the project is completed** and all work is inspected and approved. This is usually around **10 to 14 days after the project is delivered**. If you have a specific timeline in mind, please provide more details so I can assist you better.",
+      "finetuned_answer": "Final retainage is released 10 days after the Closeout."
+    },
+    {
+      "question": "How is the length of a weather\u2011delay extension calculated?",
+      "reference": "The extension equals the number of working days lost due to the excusable weather event.",
+      "source": "contract_general_conditions.md > 1. Schedule and Delays",
+      "base_answer": "The length of a weather-delay extension is typically calculated based on the distance between the original construction site and the location where the delay is expected to occur. This distance is often determined by the distance between the original construction site and the location where the delay is expected to occur, which may be based on the original construction site's location and the expected delay.",
+      "finetuned_answer": "The length is calculated as the difference between the original project start date and the extension end date, with the result being a positive or negative number."
+    },
+    {
+      "question": "How long does the architect have to answer a standard RFI?",
+      "reference": "The architect\u2019s standard response time is 5 business days.",
+      "source": "rfi_and_submittal_process.md > 1. Requests for Information (RFIs)",
+      "base_answer": "The architect has 10 business days to respond to a standard RFI.",
+      "finetuned_answer": "The architect has 48 hours to respond."
+    }
+  ]
+}
