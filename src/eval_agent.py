@@ -44,7 +44,8 @@ TESTS = [
 
 def check(test, answer, steps):
     tools_used = {s["tool"] for s in steps}
-    text = answer.lower()
+        # Normalize formatting so "10 %" and "10%" count as the same (AI models vary spacing)
+    text = answer.lower().replace("\u202f", " ").replace("\u00a0", " ").replace(" %", "%")
     failures = []
     for tool in test["expect_tools"]:
         if tool not in tools_used:
