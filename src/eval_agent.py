@@ -17,6 +17,9 @@ HISTORY_PATH = "outputs/agent_eval_history.jsonl"
 
 # Each test: question, tools that must be used, text that must / must not appear in the answer.
 TESTS = [
+    {"id": "digest_names", "question": "What happened on site today?",
+     "expect_tools": ["get_daily_digest"], "must_contain": ["A2001"],
+     "must_not_contain": ["Brickell Boutique", "Stuart Medical"]},
     {"id": "risk_ranking", "question": "Which active project is most likely to run late?",
      "expect_tools": ["rank_active_projects_by_risk"], "must_contain": ["A2001"], "must_not_contain": []},
     {"id": "weather_notice", "question": "How many days do we have to file a weather delay notice?",

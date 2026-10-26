@@ -1,81 +1,82 @@
 [
   {
-    "project_id": "P1002",
-    "project_type": "marina",
+    "project_id": "A2001",
+    "project_type": "Marina Expansion",
     "date": "10/20",
     "superintendent": "Mike R",
     "crew_size": 14,
     "work_completed": [
-      "dock pilings row C completed (8 of 12)",
-      "row D pilings started after lunch"
+      "Dock pilings row C completed (8 of 12)",
+      "Row D started after lunch"
     ],
     "delays": [
-      "lost 2 hrs on pile driving due to barge arriving late (~10:30)",
-      "seawall cap pour postponed to Thursday because inspector unavailable"
+      "Lost 2 hrs on pile driving due to late barge arrival",
+      "Concrete for seawall cap pour delayed to Thursday (inspector unavailable)"
     ],
     "safety": [
-      "worker on dock edge without harness stopped",
-      "toolbox talk on fall protection conducted",
-      "no injuries reported"
+      "Worker on dock edge without harness near open water (stopped)",
+      "Toolbox talk on fall protection after lunch"
     ],
     "rfis_needed": [
-      "clarify cleat spacing discrepancy: drawing S-301 shows 10\u202fft, spec 06\u202f73\u202f00 requires 8\u202fft"
+      "Clarify cleat spacing discrepancy between drawing S-301 (10ft) and spec section 06 73 00 (8ft) before installation"
     ],
     "change_orders_needed": [],
     "procurement_risks": [
-      "stainless hardware delivery delayed 2 weeks per supplier"
+      "Stainless hardware delayed, supplier says 2 more weeks"
     ],
     "priority": "HIGH",
-    "one_line_summary": "Crew of 14 finished most of row C pilings, began row D, lost 2\u202fhrs from a late barge, corrected a safety breach, issued an RFI on cleat spacing, and faces a 2\u2011week stainless hardware delay."
+    "one_line_summary": "Crew of 14 progressed dock pilings but lost 2 hrs due to late barge and delayed concrete pour; safety issue addressed; RFI on cleat spacing; stainless hardware delayed."
   },
   {
-    "project_id": "P1007",
-    "project_type": "hospitality",
+    "project_id": "A2004",
+    "project_type": "Boutique Hotel",
     "date": "10/20",
     "superintendent": "Ana G",
     "crew_size": null,
     "work_completed": [
-      "drywall 4th floor 80% complete"
+      "Drywall 4th floor 80% complete",
+      "MEP rough-in 5th floor ongoing"
     ],
     "delays": [
-      "impact windows submittal not approved causing potential schedule delay",
-      "owner requested lobby flooring change to marble requiring change order"
+      "Impact window submittal not approved causing schedule risk",
+      "Owner requested lobby flooring change to marble pending CO"
     ],
     "safety": [
-      "near miss: conduit dropped from 5th floor scaffold, no injury; toe boards added"
+      "Near miss: conduit dropped from 5th floor scaffold, no injury; toe boards added"
     ],
     "rfis_needed": [
-      "impact windows submittal revision required"
+      "Clarification on revised impact window submittal requirements"
     ],
     "change_orders_needed": [
-      "lobby flooring change from porcelain to marble"
+      "Lobby flooring change from porcelain to marble"
     ],
     "procurement_risks": [
-      "impact windows long lead time (12 weeks)"
+      "Impact windows 12\u2011week lead time may delay schedule",
+      "Marble flooring procurement may affect timeline"
     ],
     "priority": "HIGH",
-    "one_line_summary": "Drywall 80% complete, MEP rough\u2011in ongoing; windows submittal delay and lobby flooring change require action; near\u2011miss conduit drop reported."
+    "one_line_summary": "Drywall near complete, MEP rough\u2011in ongoing, window submittal delay and lobby flooring change create schedule risks; near\u2011miss safety event reported."
   },
   {
-    "project_id": "P1015",
-    "project_type": "renovation",
+    "project_id": "A2007",
+    "project_type": "Medical Fitout",
     "date": "10/20",
     "superintendent": "Dave K",
     "crew_size": 5,
     "work_completed": [
-      "demo of old kitchen done",
-      "plumber rough\u2011in started"
+      "Demo of old kitchen completed"
     ],
     "delays": [
-      "work stopped in sink area due to rotted floor joists not on drawings"
+      "Rotted floor joists discovered under sink area; work stopped pending structural engineer review",
+      "Dumpster full; swap needed next day"
     ],
     "safety": [],
     "rfis_needed": [
-      "structural engineer needed for rotted floor joists not on drawings"
+      "Structural engineer review of rotted floor joists (RFI)"
     ],
     "change_orders_needed": [],
     "procurement_risks": [],
     "priority": "HIGH",
-    "one_line_summary": "Demo completed, rotted joists discovered requiring engineer review; plumber rough\u2011in started; crew of 5 on track."
+    "one_line_summary": "Demo completed, rotted joists discovered causing work stop and RFI; plumber rough\u2011in started; 5\u2011person crew on track; dumpster swap needed."
   }
 ]

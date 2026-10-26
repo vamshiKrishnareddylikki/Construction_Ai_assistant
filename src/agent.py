@@ -34,7 +34,9 @@ Rules:
 3. For predictions, mention the model's typical error (about 9 days).
 4. If the tools can't answer, say so clearly.
 5. Safety questions: follow the safety manual exactly; never suggest skipping safety steps.
-6. Be concise and practical: short paragraphs or bullets a busy PM can scan."""
+6. Be concise and practical: short paragraphs or bullets a busy PM can scan.
+7. Use project names exactly as they appear in tool results. Never combine or guess names,
+   and never cite a section number unless the tool result shows it."""
 
 
 def trace(event):

@@ -1,68 +1,69 @@
 # Daily Site Report Digest
 
-### P1002 (marina): 10/20  [HIGH]
-*Crew of 14 finished most of row C pilings, began row D, lost 2 hrs from a late barge, corrected a safety breach, issued an RFI on cleat spacing, and faces a 2‑week stainless hardware delay.*  
+### A2001 (Marina Expansion): 10/20  [HIGH]
+*Crew of 14 progressed dock pilings but lost 2 hrs due to late barge and delayed concrete pour; safety issue addressed; RFI on cleat spacing; stainless hardware delayed.*  
 Superintendent: Mike R | Crew: 14
 
 **Work completed**
-- dock pilings row C completed (8 of 12)
-- row D pilings started after lunch
+- Dock pilings row C completed (8 of 12)
+- Row D started after lunch
 
 **Delays**
-- lost 2 hrs on pile driving due to barge arriving late (~10:30)
-- seawall cap pour postponed to Thursday because inspector unavailable
+- Lost 2 hrs on pile driving due to late barge arrival
+- Concrete for seawall cap pour delayed to Thursday (inspector unavailable)
 
 **⚠️ Safety**
-- worker on dock edge without harness stopped
-- toolbox talk on fall protection conducted
-- no injuries reported
+- Worker on dock edge without harness near open water (stopped)
+- Toolbox talk on fall protection after lunch
 
 **RFIs needed**
-- clarify cleat spacing discrepancy: drawing S-301 shows 10 ft, spec 06 73 00 requires 8 ft
+- Clarify cleat spacing discrepancy between drawing S-301 (10ft) and spec section 06 73 00 (8ft) before installation
 
 **Procurement risks**
-- stainless hardware delivery delayed 2 weeks per supplier
+- Stainless hardware delayed, supplier says 2 more weeks
 
 
 ---
 
-### P1007 (hospitality): 10/20  [HIGH]
-*Drywall 80% complete, MEP rough‑in ongoing; windows submittal delay and lobby flooring change require action; near‑miss conduit drop reported.*  
+### A2004 (Boutique Hotel): 10/20  [HIGH]
+*Drywall near complete, MEP rough‑in ongoing, window submittal delay and lobby flooring change create schedule risks; near‑miss safety event reported.*  
 Superintendent: Ana G | Crew: None
 
 **Work completed**
-- drywall 4th floor 80% complete
+- Drywall 4th floor 80% complete
+- MEP rough-in 5th floor ongoing
 
 **Delays**
-- impact windows submittal not approved causing potential schedule delay
-- owner requested lobby flooring change to marble requiring change order
+- Impact window submittal not approved causing schedule risk
+- Owner requested lobby flooring change to marble pending CO
 
 **⚠️ Safety**
-- near miss: conduit dropped from 5th floor scaffold, no injury; toe boards added
+- Near miss: conduit dropped from 5th floor scaffold, no injury; toe boards added
 
 **RFIs needed**
-- impact windows submittal revision required
+- Clarification on revised impact window submittal requirements
 
 **Change orders needed**
-- lobby flooring change from porcelain to marble
+- Lobby flooring change from porcelain to marble
 
 **Procurement risks**
-- impact windows long lead time (12 weeks)
+- Impact windows 12‑week lead time may delay schedule
+- Marble flooring procurement may affect timeline
 
 
 ---
 
-### P1015 (renovation): 10/20  [HIGH]
-*Demo completed, rotted joists discovered requiring engineer review; plumber rough‑in started; crew of 5 on track.*  
+### A2007 (Medical Fitout): 10/20  [HIGH]
+*Demo completed, rotted joists discovered causing work stop and RFI; plumber rough‑in started; 5‑person crew on track; dumpster swap needed.*  
 Superintendent: Dave K | Crew: 5
 
 **Work completed**
-- demo of old kitchen done
-- plumber rough‑in started
+- Demo of old kitchen completed
 
 **Delays**
-- work stopped in sink area due to rotted floor joists not on drawings
+- Rotted floor joists discovered under sink area; work stopped pending structural engineer review
+- Dumpster full; swap needed next day
 
 **RFIs needed**
-- structural engineer needed for rotted floor joists not on drawings
+- Structural engineer review of rotted floor joists (RFI)
 

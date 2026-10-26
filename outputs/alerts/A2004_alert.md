@@ -3,12 +3,12 @@
 
 Hi Marcus,
 
-Our schedule model now predicts an 83‑day delay to the Jupiter Inlet Boutique Hotel (A2004), with a typical model error of ±9 days. The primary drivers appear to be the 13 open change orders, the project’s start during hurricane season, and the fact that only 220 of the 600 planned days have elapsed.
+Our schedule model now projects an 83‑day delay for the Jupiter Inlet Boutique Hotel (A2004). The primary drivers appear to be the 13 change orders already issued and the project's start during hurricane season, which together have compressed the remaining 380 days of work after 220 days elapsed.
 
-To mitigate risk, please:  
-1) Review and prioritize all open change orders for potential scope or cost impacts;  
-2) Update the master schedule with revised durations and incorporate the latest weather forecasts;  
-3) Verify the status of long‑lead items and adjust procurement as needed.
+Please consider the following actions:
+1. Review all open change orders for scope, cost, and schedule impacts.  
+2. Update the master schedule with the latest actuals and incorporate the predicted delay.  
+3. Verify the status of long‑lead items and adjust procurement as needed.
 
-Best regards,  
+Regards,  
 Project Controls Bot
