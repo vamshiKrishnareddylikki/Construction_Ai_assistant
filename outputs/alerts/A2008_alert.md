@@ -3,12 +3,12 @@
 
 Marcus,
 
-Our schedule model now forecasts a ≈90‑day delay on the Brickell Mixed‑Use Tower (A2008). The risk stems primarily from the project’s start during hurricane season, the 16 change orders already issued, and the fact that only 260 of the 560 planned days have elapsed.  
+Our schedule model now predicts a **90‑day delay** for the Brickell Mixed‑Use Tower (A2008), which exceeds the typical model error of ±9 days. The primary drivers appear to be the high volume of change orders (16 to date) and the project’s start during hurricane season, combined with 260 of the 560 planned days already elapsed.
 
-**Next steps:**  
-1. Review all open change orders to confirm scope and cost impacts.  
-2. Update the master schedule with the latest progress and incorporate a weather‑contingency buffer.  
-3. Verify the status of long‑lead items and secure any at‑risk deliveries.
+**Recommended next steps:**  
+1. Conduct an expedited review of all open change orders to assess scope, cost, and schedule impacts.  
+2. Update the master schedule with the latest actuals and incorporate realistic weather buffers.  
+3. Verify the status and lead times of long‑lead items that could be further affected by seasonal conditions.
 
-Regards,  
+Best regards,  
 Project Controls Bot
