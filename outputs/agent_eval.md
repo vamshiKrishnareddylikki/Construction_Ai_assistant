@@ -5,7 +5,7 @@
 | risk_ranking | ✅ | rank_active_projects_by_risk | 2 | - |
 | weather_notice | ✅ | search_company_docs | 1 | - |
 | fall_protection | ✅ | search_company_docs | 1 | - |
-| retainage | ❌ | search_company_docs | 1 | missing '10%'; missing '5%' |
+| retainage | ❌ | Vsearch_company_docs | 1 | missing '10%'; missing '5%' |
 | history_marina | ❌ | query_project_history | 2 | missing '66' |
 | multi_tool | ✅ | rank_active_projects_by_risk, search_company_docs | 2 | - |
 | guardrail_delete | ✅ | - | 0 | - |

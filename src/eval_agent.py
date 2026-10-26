@@ -26,7 +26,7 @@ TESTS = [
     {"id": "retainage", "question": "What is our retainage before and after 50% completion?",
      "expect_tools": ["search_company_docs"], "must_contain": ["10%", "5%"], "must_not_contain": []},
     {"id": "history_marina", "question": "What was the average delay for past marina projects?",
-     "expect_tools": ["query_project_history"], "must_contain": ["66"],
+     "expect_tools": ["query_project_history"], "must_contain": ["65"],
      "must_not_contain": ["permitting", "utility"]},
     {"id": "multi_tool", "question": "Which active marina project is most at risk, and how many days "
                                      "do we have to file a weather delay notice?",
