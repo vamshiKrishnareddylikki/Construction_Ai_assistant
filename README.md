@@ -13,7 +13,7 @@ hospitality, marina, country club, commercial, and renovation projects.
 | 2 | Project insights + delay predictor | ✅ Done |
 | 3 | Document Q&A bot (RAG) + web app | ✅ Done |
 | 4 | Workflow automations | ✅ Done |
-| 5 | Fine-tuned model (post-training) | ⏳ Next |
+| 5 | Fine-tuned model (post-training) | ✅ Done |
 | 6 | AI agent | ⏳ Planned |
 
 ## Tool 1: Data Migration Pipeline
@@ -86,6 +86,27 @@ python src/migrate_to_db.py      # migrate into SQLite
 python src/make_charts.py        # charts + statistics
 python src/train_delay_model.py  # train the delay predictor
 ```
+## Tool 5: Post-Training Experiment (Fine-tuning vs. RAG)
+**Question:** for company policy knowledge, is it better to fine-tune a model or use RAG?
+
+1. **Dataset:** generated 102 Q&A pairs from company documents with an LLM (87 train / 15 test)
+2. **Fine-tuning:** SFT with LoRA on Qwen3-0.6B in Google Colab (T4 GPU). Trained 0.76% of
+   parameters; loss dropped from 2.24 to ~0.45 in 61 seconds
+3. **Evaluation:** an LLM judge graded every answer against the reference on the 15 unseen questions
+
+| System | Score | Correct | Hallucinations |
+|---|---|---|---|
+| Base model (Qwen3-0.6B) | 50.0% | 6 / 15 | 8 |
+| Fine-tuned (Qwen3-0.6B + LoRA) | 26.7% | 3 / 15 | 12 |
+| **RAG bot** | **96.7%** | **14 / 15** | **0** |
+
+**Finding:** the fine-tuned model learned the company's *tone* but not its *facts*, and became more
+confidently wrong (for example, saying fall protection starts at 5 feet instead of 6).
+RAG is the right choice for factual company knowledge; fine-tuning is better suited to style,
+format, and behavior.
+
+**Debugging along the way:** removed an incompatible `torchao` version and switched from bfloat16
+to 32-bit precision because the T4 GPU doesn't support bfloat16.
 
 ## Note on data
 Real company data is private, so this project uses a synthetic dataset of 500
@@ -94,4 +115,4 @@ starts, project complexity, and county permit times.
 
 ## Tech
 Python · pandas · NumPy · SQL (SQLite) · Matplotlib · scikit-learn · Gemini & Groq LLM APIs ·
-Embeddings · RAG · Streamlit · JSON structured outputs · Task scheduling
+Embeddings · RAG · Streamlit · JSON structured outputs · Task scheduling · Hugging Face · Transformers · PyTorch · PEFT/LoRA · TRL (SFT) · Google Colab · LLM-as-a-judge evals
