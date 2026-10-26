@@ -68,6 +68,17 @@ def predict_delay(project_id):
             "change_orders": int(p["change_orders"]),
             "hurricane_season_start": bool(p["hurricane_season_start"])}
 
+def rank_active_projects_by_risk():
+    """Predict delays for ALL active projects at once and rank them, highest risk first."""
+    df = pd.read_csv(ACTIVE_PATH)
+    model = joblib.load(MODEL_PATH)
+    df["predicted_delay_days"] = model.predict(df[FEATURES]).round().astype(int)
+    df = df.sort_values("predicted_delay_days", ascending=False)
+    return {"model_typical_error_days": 9,
+            "projects": df[["project_id", "project_name", "project_type", "county",
+                            "project_manager", "change_orders", "predicted_delay_days"]]
+                        .to_dict(orient="records")}
+
 
 def get_daily_digest():
     """Return today's summarized superintendent field reports (from the daily automation)."""
@@ -80,6 +91,11 @@ def get_daily_digest():
 
 # What the LLM sees: name + description + input format for each tool.
 TOOL_SCHEMAS = [
+    {"type": "function", "function": {
+        "name": "rank_active_projects_by_risk",
+        "description": "Predict delays for ALL active projects at once, ranked highest risk first. "
+                       "Use this for any question comparing projects or asking which is most at risk.",
+        "parameters": {"type": "object", "properties": {}}}},
     {"type": "function", "function": {
         "name": "search_company_docs",
         "description": "Search company documents (contract general conditions, safety manual, closeout "
@@ -115,6 +131,7 @@ TOOL_SCHEMAS = [
 ]
 
 TOOLS = {
+    "rank_active_projects_by_risk": rank_active_projects_by_risk,
     "search_company_docs": search_company_docs,
     "query_project_history": query_project_history,
     "list_active_projects": list_active_projects,
