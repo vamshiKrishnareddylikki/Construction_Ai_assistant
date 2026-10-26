@@ -7,14 +7,13 @@ Built around the needs of a South Florida general contractor: multifamily,
 hospitality, marina, country club, commercial, and renovation projects.
 
 ## Tools
-
 | # | Tool | Status |
 |---|------|--------|
 | 1 | Data migration pipeline | ✅ Done |
 | 2 | Project insights + delay predictor | ✅ Done |
-| 3 | Document Q&A bot (RAG) | ⏳ Next |
-| 4 | Workflow automations | ⏳ Planned |
-| 5 | Fine-tuned model (post-training) | ⏳ Planned |
+| 3 | Document Q&A bot (RAG) + web app | ✅ Done |
+| 4 | Workflow automations | ✅ Done |
+| 5 | Fine-tuned model (post-training) | ⏳ Next |
 | 6 | AI agent | ⏳ Planned |
 
 ## Tool 1: Data Migration Pipeline
@@ -47,6 +46,39 @@ The model cuts prediction error in half compared to the baseline.
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+python src/build_index.py         # build the document search index
+streamlit run src/app.py          # open the Q&A web app
+python src/daily_run.py           # run all daily automations
+
+## Tool 3: Document Q&A Bot (RAG)
+Answers questions from company documents (contracts, safety manual, closeout, RFI process),
+with source citations. Built for non-technical staff with a Streamlit web page.
+- Splits documents into sections and embeds them (Gemini embeddings)
+- Finds the most relevant sections by meaning, not keywords (cosine similarity)
+- The LLM answers **only** from retrieved sections and cites them
+- Says "I couldn't find that" when the answer isn't in the documents (no hallucinations)
+
+| Question | Answer | Top match |
+|---|---|---|
+| Weather delay notice deadline? | 7 calendar days | 0.83 |
+| Documents needed for final payment? | Lien waivers, as-builts, O&M manuals, warranties... | 0.77 |
+| Remote work policy? | "I couldn't find that in the company documents" | 0.58 (no good match) |
+
+## Tool 4: Workflow Automations
+A daily pipeline that runs every morning on a schedule:
+1. **Site report summarizer:** turns messy superintendent field logs into structured summaries,
+   sorted by priority, flagging safety issues, RFIs, change orders, and procurement risks
+2. **RFI drafter:** turns field issues into formal RFI drafts that follow company rules.
+   Never invents drawing references; every draft is marked for PM review
+3. **Delay risk alerts:** runs the Tool 2 model on active projects and emails AI-written alerts
+   to project managers (dry-run mode by default)
+4. **Daily runner:** runs all steps on a schedule with failure isolation and timestamped logs
+
+## Reliability
+- **Provider-agnostic LLM layer:** switch between Groq and Gemini with one `.env` setting
+- **Retries with exponential backoff** for rate limits and server overload (429/5xx)
+- **Timeouts**, so requests never hang
+- **Secrets** stored in `.env`, never committed
 
 python src/generate_data.py      # create realistic sample data
 python src/clean_data.py         # clean it
@@ -61,4 +93,5 @@ projects that models realistic causes of delay: change orders, hurricane-season
 starts, project complexity, and county permit times.
 
 ## Tech
-Python · pandas · NumPy · SQL (SQLite) · Matplotlib · scikit-learn
+Python · pandas · NumPy · SQL (SQLite) · Matplotlib · scikit-learn · Gemini & Groq LLM APIs ·
+Embeddings · RAG · Streamlit · JSON structured outputs · Task scheduling
