@@ -6,6 +6,7 @@ Run with:  streamlit run src/app.py
 """
 import json
 import streamlit as st
+import traceback
 from ask_docs import load_index, answer
 from agent import run_agent
 
@@ -51,9 +52,10 @@ with agent_tab:
             with st.spinner("Thinking and checking project tools..."):
                 try:
                     reply, steps = run_agent(question, st.session_state.history, verbose=False)
-                except Exception:
-                    reply, steps = ("The AI service is busy right now. Please try again in a "
-                                    "few minutes."), []
+                except Exception as e:
+                    traceback.print_exc()  # full error goes to the server logs for the maintainer
+                    reply, steps = (f"Sorry, something went wrong ({type(e).__name__}). "
+                                    "Please try again in a few minutes."), []
             st.markdown(reply)
             if steps:
                 with st.expander(f"🔧 Tools used ({len(steps)})"):
@@ -77,8 +79,9 @@ with docs_tab:
         with st.spinner("Searching company documents..."):
             try:
                 reply, matches = answer(doc_question, get_index())
-            except Exception:
-                st.error("The AI service is busy right now. Please try again in a few minutes.")
+            except Exception as e:
+                traceback.print_exc()
+                st.error(f"Sorry, something went wrong ({type(e).__name__}). Please try again in a few minutes.")
                 st.stop()
         st.subheader("Answer")
         st.markdown(reply)
