@@ -1,5 +1,5 @@
 # Construction AI Assistant
-**🔗 Live demo:** https://YOUR-APP-LINK.streamlit.app
+**🔗 Live demo:** https://constructionaiassistant-pjrf4zs8murqnpvmufgiwj.streamlit.app
 *(Synthetic data for a fictional contractor. Ask about project risk, company policy, or today's field reports.)*
 
 An AI toolkit for construction project teams: data migration, project insights,
