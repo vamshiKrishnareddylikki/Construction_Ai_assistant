@@ -1,4 +1,6 @@
 # Construction AI Assistant
+**🔗 Live demo:** https://YOUR-APP-LINK.streamlit.app
+*(Synthetic data for a fictional contractor. Ask about project risk, company policy, or today's field reports.)*
 
 An AI toolkit for construction project teams: data migration, project insights,
 document Q&A, workflow automation, a fine-tuned model, and an AI agent.
