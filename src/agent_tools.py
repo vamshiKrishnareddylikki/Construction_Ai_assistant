@@ -8,6 +8,8 @@ import re
 import sqlite3
 import joblib
 import pandas as pd
+import os
+import glob
 from ask_docs import load_index, retrieve
 
 DB_PATH = "data/projects.db"
@@ -68,6 +70,7 @@ def predict_delay(project_id):
             "change_orders": int(p["change_orders"]),
             "hurricane_season_start": bool(p["hurricane_season_start"])}
 
+
 def rank_active_projects_by_risk():
     """Predict delays for ALL active projects at once and rank them, highest risk first."""
     df = pd.read_csv(ACTIVE_PATH)
@@ -89,13 +92,30 @@ def get_daily_digest():
         return {"error": "No digest yet. Run python src/summarize_reports.py first."}
 
 
+DRAWINGS_DIR = "data/drawings"
+
+
+def list_drawing_sets():
+    """List the drawing set PDFs available for review."""
+    files = sorted(os.path.basename(p) for p in glob.glob(os.path.join(DRAWINGS_DIR, "*.pdf")))
+    return {"drawing_sets": files} if files else {"error": "No drawing PDFs found in data/drawings."}
+
+
+def review_drawing_set(file_name):
+    """Pre-construction review of one drawing set: missing sheets, NOA issues, long-lead items, RFIs."""
+    from review_drawings import review  # imported here so the agent still works without Gemini vision
+    safe_name = os.path.basename(file_name)  # guardrail: only files inside data/drawings
+    path = os.path.join(DRAWINGS_DIR, safe_name)
+    if not safe_name.lower().endswith(".pdf") or not os.path.exists(path):
+        return {"error": f"No drawing set named {file_name}. Use list_drawing_sets first."}
+    data, findings, _, report_path = review(path, use_cache=True)
+    return {"project": data.get("project", {}), "sheets_in_set": data.get("sheets_in_set", []),
+            "findings": findings, "full_report": report_path,
+            "note": "AI-assisted first pass. Requires PM/estimator review. No takeoffs or measurements."}
+
+
 # What the LLM sees: name + description + input format for each tool.
 TOOL_SCHEMAS = [
-    {"type": "function", "function": {
-        "name": "rank_active_projects_by_risk",
-        "description": "Predict delays for ALL active projects at once, ranked highest risk first. "
-                       "Use this for any question comparing projects or asking which is most at risk.",
-        "parameters": {"type": "object", "properties": {}}}},
     {"type": "function", "function": {
         "name": "search_company_docs",
         "description": "Search company documents (contract general conditions, safety manual, closeout "
@@ -110,6 +130,9 @@ TOOL_SCHEMAS = [
                        "Columns: project_id, project_type, county, start_date, planned_days, actual_days, "
                        "budget_usd, actual_cost_usd, change_orders, safety_incidents, "
                        "hurricane_season_start (1/0), cost_missing (1/0), delay_days, overrun_usd, overrun_pct. "
+                       "Exact text values (case-sensitive!): project_type in ('Multifamily', 'Hospitality', "
+                       "'Commercial', 'Country Club', 'Marina', 'Luxury Residential', 'Renovation'); "
+                       "county in ('Miami-Dade', 'Broward', 'Palm Beach', 'Martin', 'St. Lucie'). "
                        "Use for statistics and trends from past projects.",
         "parameters": {"type": "object", "properties": {
             "sql": {"type": "string", "description": "A single SQLite SELECT statement"}},
@@ -124,6 +147,23 @@ TOOL_SCHEMAS = [
         "parameters": {"type": "object", "properties": {
             "project_id": {"type": "string"}}, "required": ["project_id"]}}},
     {"type": "function", "function": {
+        "name": "rank_active_projects_by_risk",
+        "description": "Predict delays for ALL active projects at once, ranked highest risk first. "
+                       "Use this for any question comparing projects or asking which is most at risk.",
+        "parameters": {"type": "object", "properties": {}}}},
+    {"type": "function", "function": {
+        "name": "list_drawing_sets",
+        "description": "List architectural drawing set PDFs available for pre-construction review.",
+        "parameters": {"type": "object", "properties": {}}}},
+    {"type": "function", "function": {
+        "name": "review_drawing_set",
+        "description": "Pre-construction review of a drawing set PDF: missing sheets and disciplines, "
+                       "windows/doors missing impact rating or Miami-Dade NOA, long-lead procurement items, "
+                       "and RFI candidates. Does NOT do quantity takeoffs or measurements.",
+        "parameters": {"type": "object", "properties": {
+            "file_name": {"type": "string", "description": "PDF file name from list_drawing_sets"}},
+            "required": ["file_name"]}}},
+    {"type": "function", "function": {
         "name": "get_daily_digest",
         "description": "Get today's summary of superintendent daily field reports: safety issues, "
                        "delays, RFIs needed, change orders, and procurement risks.",
@@ -131,12 +171,14 @@ TOOL_SCHEMAS = [
 ]
 
 TOOLS = {
-    "rank_active_projects_by_risk": rank_active_projects_by_risk,
     "search_company_docs": search_company_docs,
     "query_project_history": query_project_history,
     "list_active_projects": list_active_projects,
     "predict_delay": predict_delay,
+    "rank_active_projects_by_risk": rank_active_projects_by_risk,
     "get_daily_digest": get_daily_digest,
+    "list_drawing_sets": list_drawing_sets,
+    "review_drawing_set": review_drawing_set,
 }
 
 

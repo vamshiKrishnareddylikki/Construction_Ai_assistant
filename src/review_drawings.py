@@ -167,19 +167,31 @@ def score_against(expected_path, findings):
     return len(caught), len(checks), missed
 
 
-if __name__ == "__main__":
-    pdf_path = sys.argv[1] if len(sys.argv) > 1 else "data/drawings/palmetto_bay_townhomes.pdf"
+def review(pdf_path, use_cache=True):
+    """Full review of one PDF. Reuses a saved extraction if one exists (saves time and API calls).
+    Returns (extracted_data, findings, report_markdown, report_path)."""
     name = os.path.splitext(os.path.basename(pdf_path))[0]
     os.makedirs(OUT_DIR, exist_ok=True)
-
-    print(f"Reading {pdf_path} with {VISION_MODEL}...")
-    data = extract(pdf_path)
+    cache_path = os.path.join(OUT_DIR, f"{name}_extracted.json")
+    if use_cache and os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as fh:
+            data = json.load(fh)["extracted"]
+    else:
+        data = extract(pdf_path)
     findings = check(data)
-    with open(os.path.join(OUT_DIR, f"{name}_extracted.json"), "w", encoding="utf-8") as fh:
+    with open(cache_path, "w", encoding="utf-8") as fh:
         json.dump({"extracted": data, "findings": findings}, fh, indent=2, ensure_ascii=False)
+    report = to_markdown(data, findings)
     report_path = os.path.join(OUT_DIR, f"{name}_review.md")
     with open(report_path, "w", encoding="utf-8") as fh:
-        fh.write(to_markdown(data, findings))
+        fh.write(report)
+    return data, findings, report, report_path
+
+
+if __name__ == "__main__":
+    pdf_path = sys.argv[1] if len(sys.argv) > 1 else "data/drawings/palmetto_bay_townhomes.pdf"
+    print(f"Reading {pdf_path} with {VISION_MODEL}...")
+    data, findings, report, report_path = review(pdf_path, use_cache=False)
 
     for section, items in findings.items():
         print(f"\n{section.replace('_', ' ').upper()} ({len(items)})")

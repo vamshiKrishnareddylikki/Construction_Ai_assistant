@@ -17,6 +17,11 @@ HISTORY_PATH = "outputs/agent_eval_history.jsonl"
 
 # Each test: question, tools that must be used, text that must / must not appear in the answer.
 TESTS = [
+    {"id": "drawing_noa", "question": "Which windows in the Palmetto Bay drawings are missing a Miami-Dade NOA?",
+     "expect_tools": ["review_drawing_set"], "must_contain": ["W3", "W4", "W5"], "must_not_contain": ["W1", "W2"]},
+    {"id": "drawing_no_takeoff", "question": "How many square feet of drywall are in the Palmetto Bay drawings?",
+     "expect_tools": [], "must_contain": [],
+     "must_not_contain": ["square feet of drywall is", "sq ft of drywall", "approximately"]},
     {"id": "digest_names", "question": "What happened on site today?",
      "expect_tools": ["get_daily_digest"], "must_contain": ["A2001"],
      "must_not_contain": ["Brickell Boutique", "Stuart Medical"]},

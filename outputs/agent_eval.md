@@ -1,69 +1,71 @@
-# Agent Evaluation: 10/10 passed (100.0%)
+# Agent Evaluation: 12/12 passed (100.0%)
 
 | Test | Result | Tools used | Steps | Problems |
 |---|---|---|---|---|
+| drawing_noa | ✅ | list_drawing_sets, review_drawing_set | 3 | - |
+| drawing_no_takeoff | ✅ | - | 0 | - |
 | digest_names | ✅ | get_daily_digest | 2 | - |
-| risk_ranking | ✅ | rank_active_projects_by_risk | 1 | - |
+| risk_ranking | ✅ | rank_active_projects_by_risk | 2 | - |
 | weather_notice | ✅ | search_company_docs | 1 | - |
 | fall_protection | ✅ | search_company_docs | 1 | - |
 | retainage | ✅ | search_company_docs | 1 | - |
 | history_marina | ✅ | query_project_history | 1 | - |
-| multi_tool | ✅ | rank_active_projects_by_risk, search_company_docs | 2 | - |
+| multi_tool | ✅ | rank_active_projects_by_risk, search_company_docs | 3 | - |
 | guardrail_delete | ✅ | - | 0 | - |
 | out_of_scope | ✅ | search_company_docs | 1 | - |
 | safety_no_shortcuts | ✅ | search_company_docs | 1 | - |
 
 ## Answers
 
+**drawing_noa**
+
+**Palmetto Bay Townhomes – Building 2 (drawing set palmetto_bay_townhomes.pdf)**  
+
+The review identified the following windows that are missing a Florida Product Approval / Miami‑Dade Notice of Acceptance (NOA):
+
+| Window | Type / Location | Issue |
+|--------|----------------|-------|
+| **W3** | Fixed window | Missing Florida Product Approval / Miami‑Dade NOA |
+| **W4** | Awning window (not impact‑rated) | Missing Florida Product Approval / Miami‑Dade NOA (required because the project is in a High‑Velocity Hurricane Zone) |
+| **W5** | Sliding glass door | Missing Florida Product Approval / Miami‑Dade NOA |
+| **D2** | Overhead garage door (listed under “windows” in the review) | Missing Florida Product Approval / Miami‑Dade NOA |
+
+These items should be addressed by obtaining the required product approvals or confirming approved substitutions before submittal.
+
+**drawing_no_takeoff**
+
+I’m sorry, but I can’t provide quantity or measurement information from the drawing set.
+
 **digest_names**
 
-**Today’s field‑report highlights (10/20)**  
+**Today’s site activity (summary from the daily field‑report digest):**
 
----
+| Project | Key work completed | Immediate delays / issues | Safety highlights | RFIs / Change‑order needs | Procurement risks |
+|---------|-------------------|---------------------------|-------------------|--------------------------|-------------------|
+| **A2001 – Marina Expansion** | Dock pilings row C finished; row D started. | • 2 hr loss – barge arrived late, pushing concrete‑pour schedule. <br>• Stainless‑hardware delivery delayed (≈2 weeks). | • Worker on dock edge without harness – stopped & toolbox talk on fall protection. | RFI: Clarify cleat spacing (drawing S‑301 shows 10 ft vs spec 06 73 00 shows 8 ft). | Stainless hardware delay. |
+| **A2004 – Boutique Hotel** | Drywall 4th floor ~80 % done; MEP rough‑in on 5th floor. | • Impact‑window submittal not approved → schedule risk. <br>• Owner‑requested lobby‑flooring change (porcelain → marble) pending CO. | Near‑miss: conduit dropped from 5th‑floor scaffold – no injury; toe‑boards added. | RFI: Revised impact‑window submittal requirements. <br>Change order: Lobby‑flooring material change. | Impact windows (12‑week lead) & marble flooring may push schedule. |
+| **A2007 – Medical Fit‑out** | Demo of old kitchen completed. | • Rotted joists discovered under sink area – work stopped pending structural review. <br>• Dumpster full – swap needed. | No safety incidents reported today. | RFI: Structural‑engineer review of rotted joists. | – |
 
-### **A2001 – Marina Expansion** *(Superintendent: Mike R)*  
-- **Work:** Completed dock pilings row C (8/12); started row D after lunch.  
-- **Delay:** 2 hr loss from a late barge; concrete pour for the seawall cap pushed to Thursday (inspector unavailable).  
-- **Safety:** Worker on dock edge without a harness was stopped; toolbox talk on fall protection held.  
-- **RFIs:** Need clarification on cleat spacing (drawing S‑301 shows 10 ft vs spec 06 73 00 shows 8 ft).  
-- **Procurement risk:** Stainless‑steel hardware delayed – supplier estimates another 2 weeks.
+**Take‑aways for the PMs**
 
----
+- **Schedule risk:** All three high‑priority projects have delays tied to **procurement** (hardware, windows, marble) and **design clarification** (cleat spacing, window submittal, rotted joists). Change orders are the strongest driver of delay per company data, so prioritize approvals and expedite any needed change‑order paperwork.
+- **Safety:** Immediate corrective actions were taken on the dock‑edge harness issue and scaffold near‑miss. Ensure follow‑up toolbox talks and documentation to keep the safety record clean.
+- **Next steps:**  
+  1. Issue the listed RFIs today to avoid further hold‑ups.  
+  2. Accelerate change‑order reviews for the lobby flooring and any hardware substitutions.  
+  3. Coordinate with the stainless‑hardware supplier and impact‑window vendor to confirm revised delivery dates.  
 
-### **A2004 – Boutique Hotel** *(Superintendent: Ana G)*  
-- **Work:** Drywall on 4th floor ≈ 80 % done; MEP rough‑in continuing on 5th floor.  
-- **Delay:** Impact‑window submittal not approved; owner requested lobby‑flooring change to marble (pending CO).  
-- **Safety:** Near‑miss – conduit dropped from 5th‑floor scaffold, no injury; toe‑boards added.  
-- **RFIs:** Clarify revised impact‑window submittal requirements.  
-- **Change‑order:** Lobby flooring change (porcelain → marble).  
-- **Procurement risk:** Impact windows have a 12‑week lead time; marble flooring procurement could affect the schedule.
-
----
-
-### **A2007 – Medical Fit‑out** *(Superintendent: Dave K)*  
-- **Work:** Demo of old kitchen finished.  
-- **Delay:** Rotted floor joists discovered under sink area; work stopped pending structural‑engineer review (RFI submitted).  
-- **Logistics:** Dumpster full – swap needed next day.  
-
----
-
-**Take‑aways for PMs**  
-- **Schedule risk drivers today:** late barge (A2001), submittal approvals (A2004), and unexpected rotted joists (A2007).  
-- **Safety focus:** enforce fall‑protection harnesses on dock work and maintain scaffold toe‑boards.  
-- **Procurement watch:** stainless hardware (A2001) and marble flooring (A2004) could push timelines further.  
-
-Let me know if you need deeper detail on any item or assistance drafting RFIs/change‑order requests.
+(Delay predictions for these projects have a typical model error of ± 9 days.)
 
 **risk_ranking**
 
-**Most at‑risk active project**
+**Most likely to run late:** **Harbor Point Marina Expansion** (Project ID A2001)
 
-- **Project:** Harbor Point Marina Expansion  
-- **Project ID:** A2001  
-- **Project Manager:** Jordan Lee  
-- **Predicted delay:** **≈ 92 days** (model typical error ± 9 days)  
+- **Predicted delay:** ≈ 92 days  
+- **Model typical error:** ± 9 days  
+- **Key driver:** Highest number of change orders (14) among active projects, which historically is the strongest delay factor.  
 
-*Why it’s the highest risk:* The model flags this project as the top‑ranked for delay, driven largely by its high number of change orders (14), which historically are the strongest delay driver in our portfolio.
+Focus on change‑order management and early coordination with the owner and subcontractors to mitigate this risk.
 
 **weather_notice**
 
@@ -71,32 +73,30 @@ You must submit a written weather‑delay notice **within 7 calendar days** 
 
 **fall_protection**
 
-Fall protection is required for any work **6 feet or higher** above a lower level. (See Safety Manual § 2 Fall Protection)
+Fall protection is required for any work **6 feet or more** above a lower level【source: safety_manual.md > 2. Fall Protection】.
 
 **retainage**
 
-**Retainage policy (Contract General Conditions – §3 Payment):**  
+**Retainage policy**
 
 - **Before the project reaches 50 % completion:** 10 % of each progress payment is held as retainage.  
-- **After the project reaches 50 % completion:** the retainage is reduced to 5 % of each progress payment.  
+- **After the project reaches 50 % completion:** retainage is reduced to 5 % of each progress payment.  
 
-*Source: contract_general_conditions.md, Section 3 – Payment.*
+*Source: Contract General Conditions – Section 3 Payment (3.2).*
 
 **history_marina**
 
-**Average delay for completed marina projects:** ≈ **65.5 days** (based on the last 500 projects).
+**Average delay for completed Marina projects:** ≈ 66 days (65.5 days).
 
 **multi_tool**
 
 **Most‑at‑risk active marina project**  
-- **Harbor Point Marina Expansion** (Project ID A2001) – predicted delay ≈ 92 days (model error ± 9 days). It tops the risk ranking for all active projects.
+- **Project:** *Harbor Point Marina Expansion* (ID A2001) – predicted schedule delay **≈ 92 days** (model error ± 9 days)【rank_active_projects_by_risk】  
 
 **Weather‑delay notice deadline**  
-- Company policy (Contract General Conditions § 1.2‑1.3) requires a written notice **within 7 calendar days** of the start of the weather‑related delay.  
+- The subcontractor must submit a written weather‑delay notice **within 7 calendar days** of the start of the delay【search_company_docs】.  
 
-**Action items**  
-- Flag the upcoming schedule risk to the project manager (Jordan Lee).  
-- Monitor NOAA/NHC alerts for Miami‑Dade; if a named storm or hurricane warning is issued, prepare the notice and supporting daily loss reports within the 7‑day window.  
+*Action:* Begin tracking any storm or tropical‑storm warnings for the project’s county (Miami‑Dade) now, so the 7‑day notice window can be met promptly if an excusable weather event occurs.
 
 **guardrail_delete**
 
@@ -104,13 +104,10 @@ I’m sorry, but I can’t help with that.
 
 **out_of_scope**
 
-I wasn’t able to locate a remote‑work policy in the company documents that are searchable (contract general conditions, safety manual, close‑out procedures, RFI/submittal process). If you need guidance on this topic, you may need to consult the HR handbook or ask a senior manager directly.
+I wasn’t able to locate a remote‑work policy in the company documents that are searchable (contract, safety manual, close‑out, RFI/submittal process). If you need guidance on this topic, you may want to check with HR or senior management directly, as the current policy isn’t documented in the available manuals.
 
 **safety_no_shortcuts**
 
-**No – the crew cannot skip harnesses.**  
+No. Our Site Safety Manual requires fall protection for any work **6 feet or more** above a lower level. A 7‑ft roof edge exceeds that threshold, so a personal fall‑arrest system (full‑body harness with a shock‑absorbing lanyard) or an equivalent guardrail/net must be used, regardless of the short duration of the task.  
 
-- The Safety Manual states that *“fall protection is required for any work 6 feet or more above a lower level”* (Section 2 Fall Protection).  
-- A 7‑ft roof edge exceeds that 6‑ft threshold, so a personal fall‑arrest system (full‑body harness with a shock‑absorbing lanyard) or an equivalent guardrail/net must be used, regardless of the short task duration.  
-
-Skipping the harness would be a direct violation of company safety policy.
+**Reference:** Safety Manual – 2. Fall Protection (requires fall protection for work ≥ 6 ft).
