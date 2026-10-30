@@ -31,6 +31,9 @@ LONG_LEAD = {  # keyword -> why it matters (company rule: submit long-lead items
     "piling": "Marine pilings: long lead and permitting",
 }
 VAGUE_PHRASES = ["tbd", "by others", "see spec", "verify", "not provided", "under separate cover"]
+# Standard boilerplate found on almost every drawing set. Not real questions, so not RFIs.
+BOILERPLATE = ["verify all existing conditions", "verify all dimensions", "field verify",
+               "dimensions to face of stud", "do not scale drawings"]
 
 EXTRACT_PROMPT = """You are reading a construction drawing set (PDF) for a pre-construction review.
 EXTRACT what is written. Do not guess, do not measure, do not fill in missing values.
@@ -79,10 +82,13 @@ def check(data):
     for kind, o in openings:
         approval, impact = norm(o.get("product_approval")), norm(o.get("impact"))
         label = f"{o.get('mark')} ({o.get('type')})"
+        problems = []  # collect all problems for this opening, then report them in one line
         if impact in {"no", "n"} and hvhz:
-            findings["approval_issues"].append(f"{label}: NOT impact-rated, but project is in HVHZ")
+            problems.append("NOT impact-rated, but project is in HVHZ")
         if not approval or "tbd" in approval:
-            findings["approval_issues"].append(f"{label}: missing Florida Product Approval / Miami-Dade NOA")
+            problems.append("missing Florida Product Approval / Miami-Dade NOA")
+        if problems:
+            findings["approval_issues"].append(f"{label}: {'; '.join(problems)}")
 
     seen = set()
     text_items = [f"{w.get('type')} window" for w in data.get("windows", [])] + \
@@ -95,6 +101,8 @@ def check(data):
 
     for n in data.get("notes", []):
         text = norm(n["text"])
+        if any(b in text for b in BOILERPLATE):
+            continue  # skip standard boilerplate to avoid false alarms
         refs = [r.upper() for r in re.findall(r"\b[a-z]{1,2}-\d{3}\b", text)]
         missing_refs = [r for r in refs if r not in present]
         if missing_refs:

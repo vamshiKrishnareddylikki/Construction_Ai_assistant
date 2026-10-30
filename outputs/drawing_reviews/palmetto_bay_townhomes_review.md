@@ -26,8 +26,7 @@ Not included by design: quantity takeoffs, measurements, clash detection.
 
 ## 4. Florida product approval / impact issues
 - W3 (Fixed): missing Florida Product Approval / Miami-Dade NOA
-- W4 (Awning): NOT impact-rated, but project is in HVHZ
-- W4 (Awning): missing Florida Product Approval / Miami-Dade NOA
+- W4 (Awning): NOT impact-rated, but project is in HVHZ; missing Florida Product Approval / Miami-Dade NOA
 - W5 (Sliding Glass Door): missing Florida Product Approval / Miami-Dade NOA
 - D2 (Overhead Garage): missing Florida Product Approval / Miami-Dade NOA
 
@@ -38,7 +37,6 @@ Not included by design: quantity takeoffs, measurements, clash detection.
 - Metal Roof: Standing seam metal roofing needs shop drawings + lead time. Submit within 30 days of subcontract.
 
 ## 6. RFI candidates
-- [G-001] "2. Contractor shall verify all existing conditions prior to bid." is incomplete or vague.
 - [G-001] "3. MEP drawings to be issued under separate cover (date TBD)." is incomplete or vague.
 - [A-101] "3. Kitchen cabinets and countertops by others." is incomplete or vague.
 - [A-101] "4. Hurricane straps at all trusses, see S-201." references S-201, which is not in the drawing set.
@@ -48,7 +46,6 @@ Not included by design: quantity takeoffs, measurements, clash detection.
 - [A-601] "4. Garage door wind load rating: verify with engineer." is incomplete or vague.
 - [S-101] "2. Soil bearing capacity: per geotechnical report (not provided)." is incomplete or vague.
 - [A-601] W3 (Fixed): missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution.
-- [A-601] W4 (Awning): NOT impact-rated, but project is in HVHZ. Request product approval or confirm substitution.
-- [A-601] W4 (Awning): missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution.
+- [A-601] W4 (Awning): NOT impact-rated, but project is in HVHZ; missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution.
 - [A-601] W5 (Sliding Glass Door): missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution.
 - [A-601] D2 (Overhead Garage): missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution.
