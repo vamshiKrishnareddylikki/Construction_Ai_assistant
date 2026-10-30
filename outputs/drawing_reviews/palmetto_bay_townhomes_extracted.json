@@ -1,0 +1,232 @@
+{
+  "extracted": {
+    "project": {
+      "name": "PALMETTO BAY TOWNHOMES - BUILDING 2",
+      "address": "17800 SW 87th Ave (fictional)",
+      "county": "Miami-Dade County, FL",
+      "code_notes": "Florida Building Code 8th Ed. | High-Velocity Hurricane Zone (HVHZ)"
+    },
+    "sheet_index": [
+      {
+        "sheet": "G-001",
+        "title": "Cover Sheet & Sheet Index"
+      },
+      {
+        "sheet": "A-101",
+        "title": "First Floor Plan"
+      },
+      {
+        "sheet": "A-201",
+        "title": "Exterior Elevations"
+      },
+      {
+        "sheet": "A-601",
+        "title": "Door & Window Schedules"
+      },
+      {
+        "sheet": "S-101",
+        "title": "Foundation Plan"
+      },
+      {
+        "sheet": "S-201",
+        "title": "Roof Framing & Hurricane Strap Details"
+      }
+    ],
+    "sheets_in_set": [
+      "G-001",
+      "A-101",
+      "A-201",
+      "A-601",
+      "S-101"
+    ],
+    "windows": [
+      {
+        "mark": "W1",
+        "size": "3'-0\" x 5'-0\"",
+        "type": "Single Hung",
+        "impact": "YES",
+        "product_approval": "Miami-Dade NOA 23-0412.05",
+        "qty": "28"
+      },
+      {
+        "mark": "W2",
+        "size": "4'-0\" x 4'-0\"",
+        "type": "Horizontal Roller",
+        "impact": "YES",
+        "product_approval": "Miami-Dade NOA 22-1108.11",
+        "qty": "14"
+      },
+      {
+        "mark": "W3",
+        "size": "6'-0\" x 8'-0\"",
+        "type": "Fixed",
+        "impact": "YES",
+        "product_approval": "",
+        "qty": "14"
+      },
+      {
+        "mark": "W4",
+        "size": "2'-0\" x 3'-0\"",
+        "type": "Awning",
+        "impact": "NO",
+        "product_approval": "",
+        "qty": "14"
+      },
+      {
+        "mark": "W5",
+        "size": "8'-0\" x 7'-0\"",
+        "type": "Sliding Glass Door",
+        "impact": "YES",
+        "product_approval": "FL# TBD",
+        "qty": "14"
+      }
+    ],
+    "doors": [
+      {
+        "mark": "D1",
+        "size": "3'-0\" x 8'-0\"",
+        "type": "Fiberglass Entry",
+        "location": "Exterior",
+        "impact": "YES",
+        "product_approval": "Miami-Dade NOA 21-0930.02"
+      },
+      {
+        "mark": "D2",
+        "size": "16'-0\" x 8'-0\"",
+        "type": "Overhead Garage",
+        "location": "Exterior",
+        "impact": "YES",
+        "product_approval": ""
+      },
+      {
+        "mark": "D3",
+        "size": "2'-8\" x 6'-8\"",
+        "type": "Solid Core Wood",
+        "location": "Interior",
+        "impact": "N/A",
+        "product_approval": "N/A"
+      },
+      {
+        "mark": "D4",
+        "size": "2'-6\" x 6'-8\"",
+        "type": "Hollow Core Wood",
+        "location": "Interior",
+        "impact": "N/A",
+        "product_approval": "N/A"
+      }
+    ],
+    "notes": [
+      {
+        "sheet": "G-001",
+        "text": "1. Owner: Palmetto Bay Holdings LLC (fictional)."
+      },
+      {
+        "sheet": "G-001",
+        "text": "2. Contractor shall verify all existing conditions prior to bid."
+      },
+      {
+        "sheet": "G-001",
+        "text": "3. MEP drawings to be issued under separate cover (date TBD)."
+      },
+      {
+        "sheet": "A-101",
+        "text": "1. All dimensions to face of stud unless noted."
+      },
+      {
+        "sheet": "A-101",
+        "text": "2. All exterior openings to be impact-rated per HVHZ requirements."
+      },
+      {
+        "sheet": "A-101",
+        "text": "3. Kitchen cabinets and countertops by others."
+      },
+      {
+        "sheet": "A-101",
+        "text": "4. Hurricane straps at all trusses, see S-201."
+      },
+      {
+        "sheet": "A-101",
+        "text": "5. Flooring finish TBD by owner."
+      },
+      {
+        "sheet": "A-101",
+        "text": "6. Waterproofing at garage slab: see spec."
+      },
+      {
+        "sheet": "A-201",
+        "text": "1. Roofing: standing seam metal roof, manufacturer TBD."
+      },
+      {
+        "sheet": "A-201",
+        "text": "2. Stucco finish color per owner selection."
+      },
+      {
+        "sheet": "A-601",
+        "text": "1. All exterior windows and doors shall carry a valid"
+      },
+      {
+        "sheet": "A-601",
+        "text": "2. Miami-Dade NOA (HVHZ). Submit with shop drawings."
+      },
+      {
+        "sheet": "A-601",
+        "text": "3. Hardware sets per spec section 08 71 00."
+      },
+      {
+        "sheet": "A-601",
+        "text": "4. Garage door wind load rating: verify with engineer."
+      },
+      {
+        "sheet": "S-101",
+        "text": "1. Concrete: 3000 psi min @ 28 days."
+      },
+      {
+        "sheet": "S-101",
+        "text": "2. Soil bearing capacity: per geotechnical report (not provided)."
+      },
+      {
+        "sheet": "S-101",
+        "text": "3. Termite pretreatment required."
+      }
+    ]
+  },
+  "findings": {
+    "missing_sheets": [
+      "S-201"
+    ],
+    "missing_disciplines": [
+      "M (Mechanical)",
+      "E (Electrical)",
+      "P (Plumbing)"
+    ],
+    "approval_issues": [
+      "W3 (Fixed): missing Florida Product Approval / Miami-Dade NOA",
+      "W4 (Awning): NOT impact-rated, but project is in HVHZ",
+      "W4 (Awning): missing Florida Product Approval / Miami-Dade NOA",
+      "W5 (Sliding Glass Door): missing Florida Product Approval / Miami-Dade NOA",
+      "D2 (Overhead Garage): missing Florida Product Approval / Miami-Dade NOA"
+    ],
+    "long_lead": [
+      "Sliding Glass Door: Impact sliding doors often have 10-14 week lead times. Submit within 30 days of subcontract.",
+      "Garage: Impact-rated overhead garage doors are often long-lead. Submit within 30 days of subcontract.",
+      "Impact: Impact windows/doors: ~12 week lead time in South Florida. Submit within 30 days of subcontract.",
+      "Metal Roof: Standing seam metal roofing needs shop drawings + lead time. Submit within 30 days of subcontract."
+    ],
+    "rfi_candidates": [
+      "[G-001] \"2. Contractor shall verify all existing conditions prior to bid.\" is incomplete or vague.",
+      "[G-001] \"3. MEP drawings to be issued under separate cover (date TBD).\" is incomplete or vague.",
+      "[A-101] \"3. Kitchen cabinets and countertops by others.\" is incomplete or vague.",
+      "[A-101] \"4. Hurricane straps at all trusses, see S-201.\" references S-201, which is not in the drawing set.",
+      "[A-101] \"5. Flooring finish TBD by owner.\" is incomplete or vague.",
+      "[A-101] \"6. Waterproofing at garage slab: see spec.\" is incomplete or vague.",
+      "[A-201] \"1. Roofing: standing seam metal roof, manufacturer TBD.\" is incomplete or vague.",
+      "[A-601] \"4. Garage door wind load rating: verify with engineer.\" is incomplete or vague.",
+      "[S-101] \"2. Soil bearing capacity: per geotechnical report (not provided).\" is incomplete or vague.",
+      "[A-601] W3 (Fixed): missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution.",
+      "[A-601] W4 (Awning): NOT impact-rated, but project is in HVHZ. Request product approval or confirm substitution.",
+      "[A-601] W4 (Awning): missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution.",
+      "[A-601] W5 (Sliding Glass Door): missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution.",
+      "[A-601] D2 (Overhead Garage): missing Florida Product Approval / Miami-Dade NOA. Request product approval or confirm substitution."
+    ]
+  }
+}

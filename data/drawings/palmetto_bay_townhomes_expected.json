@@ -1,0 +1,41 @@
+{
+  "sheets_in_set": [
+    "G-001",
+    "A-101",
+    "A-201",
+    "A-601",
+    "S-101"
+  ],
+  "sheets_listed_but_missing": [
+    "S-201"
+  ],
+  "missing_disciplines": [
+    "M",
+    "E",
+    "P"
+  ],
+  "openings_missing_approval": [
+    "W3",
+    "W4",
+    "W5",
+    "D2"
+  ],
+  "openings_not_impact_rated": [
+    "W4"
+  ],
+  "long_lead_keywords": [
+    "impact window",
+    "sliding glass door",
+    "garage door",
+    "metal roof"
+  ],
+  "rfi_candidates_should_mention": [
+    "S-201",
+    "geotechnical",
+    "roof",
+    "flooring",
+    "waterproofing",
+    "garage door",
+    "W4"
+  ]
+}
