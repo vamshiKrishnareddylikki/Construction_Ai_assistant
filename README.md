@@ -6,7 +6,7 @@
 
 *From messy field notes to pre-construction drawing reviews: 7 AI tools, one agent, all measured.*
 
-[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://YOUR-APP-LINK.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://constructionaiassistant-pjrf4zs8murqnpvmufgiwj.streamlit.app)
 
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikitlearn&logoColor=white)
