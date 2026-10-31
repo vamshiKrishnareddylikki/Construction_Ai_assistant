@@ -21,6 +21,8 @@ def report(df, title):
     print("Missing values per column:")
     print(df.isna().sum()[df.isna().sum() > 0])
     print("Counties:", sorted(df["county"].unique()))
+    invalid = (df["budget_usd"].isna() | (df["budget_usd"] <= 0)).sum()
+    print("Invalid budgets ($0, negative, or missing):", invalid)
 
 
 def remove_duplicates(df):
@@ -40,11 +42,20 @@ def fill_missing(df):
     return df
 
 
+def flag_invalid_budgets(df):
+    """SITE-6: $0, negative, or missing budgets can't be used to calculate overrun %.
+    Keep the project (it's still real), but flag it for review instead of guessing."""
+    df["budget_invalid"] = df["budget_usd"].isna() | (df["budget_usd"] <= 0)
+    return df
+
+
 def add_metrics(df):
     """Add the numbers project managers actually care about."""
     df["delay_days"] = df["actual_days"] - df["planned_days"]
-    df["overrun_usd"] = df["actual_cost_usd"] - df["budget_usd"]
-    df["overrun_pct"] = (df["overrun_usd"] / df["budget_usd"] * 100).round(1)
+    valid = ~df["budget_invalid"]
+    # Only calculate overruns where the budget is valid; leave them blank (NaN) otherwise
+    df["overrun_usd"] = (df["actual_cost_usd"] - df["budget_usd"]).where(valid)
+    df["overrun_pct"] = (df["overrun_usd"] / df["budget_usd"] * 100).round(1).where(valid)
     df["start_date"] = pd.to_datetime(df["start_date"])
     return df
 
@@ -53,6 +64,7 @@ def clean(df):
     df = remove_duplicates(df)
     df = standardize_counties(df)
     df = fill_missing(df)
+    df = flag_invalid_budgets(df)
     df = add_metrics(df)
     return df
 
